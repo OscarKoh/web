@@ -1,0 +1,890 @@
+/*Background + Text Colors*/
+.bg-main {
+	background-color: #ECEBE6;
+}
+
+.bg-second {
+	background-color: #EEDAD1;
+}
+
+.bg-third {
+	background-color: #263A52;
+}
+
+.bg-fourth {
+	background-color: #CA822E;
+}
+
+.color-main {
+	text-decoration-color: black;
+}
+
+.color-second {
+	text-decoration-color: #EEDAD1;
+}
+
+.color-third {
+	text-decoration-color: #263A52;
+}
+
+.color-fourth {
+	text-decoration-color: #CA822E;
+}
+
+/* Styles for menu */
+a {
+	color: black;
+	text-decoration: none;
+	font-weight: none;
+}
+
+.my-link {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.nav-link {
+	color: black;
+	text-decoration: none font-family: "Jost", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.w-60 {
+	width: 60%;
+}
+
+.fa-custom {
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+.fa-custom:hover {
+	font-size: 2em;
+}
+
+.w-20 {
+	width: 20%;
+}
+
+.w-15 {
+	width: 15%;
+}
+
+
+.sign-button {
+	color: none;
+	border-radius: 50px;
+	transition-duration: 0.4s;
+}
+
+.sign-button:hover {
+	background-color: #FFFF;
+	color: black;
+}
+
+body {
+	font-family: 'Jost', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+}
+
+/*Fonts*/
+.poppins-thin {
+	font-family: "Poppins", sans-serif;
+	font-weight: 100;
+	font-style: normal;
+}
+
+.poppins-extralight {
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+.poppins-light {
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.poppins-regular {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.poppins-medium {
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.poppins-semibold {
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.poppins-bold {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.poppins-extrabold {
+	font-family: "Poppins", sans-serif;
+	font-weight: 800;
+	font-style: normal;
+}
+
+.poppins-black {
+	font-family: "Poppins", sans-serif;
+	font-weight: 900;
+	font-style: normal;
+}
+
+.poppins-thin-italic {
+	font-family: "Poppins", sans-serif;
+	font-weight: 100;
+	font-style: italic;
+}
+
+.poppins-extralight-italic {
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: italic;
+}
+
+.poppins-light-italic {
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.poppins-regular-italic {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.poppins-medium-italic {
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-style: italic;
+}
+
+.poppins-semibold-italic {
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.poppins-bold-italic {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.poppins-extrabold-italic {
+	font-family: "Poppins", sans-serif;
+	font-weight: 800;
+	font-style: italic;
+}
+
+.poppins-black-italic {
+	font-family: "Poppins", sans-serif;
+	font-weight: 900;
+	font-style: italic;
+}
+
+.didact-gothic-regular {
+	font-family: "Didact Gothic", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.jost-<uniquifier > {
+	font-family: "Jost", sans-serif;
+	font-size-adjust: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+
+
+/*tricis's css*/
+.responsive-image {
+	max-width: 100%;
+}
+
+
+
+/* Container for the filter */
+.normcat-filter-container {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+/* Filter buttons */
+.normcat-filter-btn {
+    border: none;
+    outline: none;
+    color: #000;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, width 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    width: 250px;
+}
+
+/* Default state (before clicking) */
+.normcat-filter-btn::before {
+    content: attr(data-before);
+    /* Use 'data-before' attribute */
+}
+
+/* Hover effect for buttons */
+.normcat-filter-btn:hover {
+    background-color: #EEDAD1;
+}
+
+/* Style for target button (when anchor is targeted) */
+.normcat-filter-btn:target {
+    background-color: #EEDAD1;
+    color: #CA822E;
+    width: 250px;
+    /* Expanded width on click */
+}
+
+/* Changing text for targeted button */
+.normcat-filter-btn:target::before {
+    content: attr(data-after);
+    /* Use 'data-after' attribute */
+}
+
+/* Content container styling */
+.normcat-filter-content-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Default content hidden */
+.normcat-filter-content {
+    display: none;
+}
+
+/* Display content when the corresponding anchor is targeted */
+#animation-content:target,
+#film-content:target,
+#vc-content:target,
+#artists-content:target {
+    display: block;
+}
+
+
+
+
+/* Container for the admin filter */
+.admin-filter-container {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	border: 1px solid #ccc;
+	border-radius: 25px;
+}
+
+/* Hide radio buttons */
+.admin-filter-input {
+	display: none;
+}
+
+/* Filter buttons */
+.admin-filter-btn {
+	border: none;
+	outline: none;
+	color: #000;
+	padding: 10px 10px;
+	cursor: pointer;
+	border-radius: 30px;
+	font-family: 'Jost', sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	transition: background-color 0.3s ease, width 0.3s ease;
+	text-align: center;
+	display: inline-block;
+	position: relative;
+	width: 100px;
+}
+
+/* Default state (before clicking) */
+.admin-filter-btn::before {
+	content: attr(data-before);
+	/* Use 'data-before' attribute */
+}
+
+/* Hover effect for buttons */
+.admin-filter-btn:hover {
+	background-color: #EEDAD1;
+}
+
+/* Style for checked button (when radio is checked) */
+.admin-filter-input:active + .admin-filter-btn {
+	background-color: #EEDAD1;
+	color: #CA822E;
+	width: 100px;
+	/* Expanded width on click */
+}
+
+/* Changing text for checked button */
+.admin-filter-input:active + .admin-filter-btn::before {
+	content: attr(data-after);
+	/* Use 'data-after' attribute */
+}
+
+/* Content container styling */
+.admin-content-container {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
+/* Default content hidden */
+.content {
+	display: none;
+}
+
+/* Display content when a radio button is checked */
+#users:active ~ .admin-content-container #users-content,
+#works:active ~ .admin-content-container #works-content,
+#comments:active ~ .admin-content-container #comments-content,
+	{
+	display: block;
+}
+
+
+
+.admin-list-container {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 5px;
+}
+
+.admin-list-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 10px 0;
+	background-color: #EEDAD1;
+	border-radius: 30px;
+}
+
+.admin-list-id,
+.admin-list-name,
+.admin-list-type {
+	font-size: 13px;
+}
+
+.admin-list-id {
+	width: 60px;
+}
+
+.admin-list-name {
+	flex-grow: 1;
+	text-align: left;
+	padding-left: 10px;
+	white-space: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width:  400px;
+
+}
+
+.admin-list-type {
+	width: 150px;
+	text-align: center;
+}
+
+.admin-delete-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+	.admin-list-item {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 15px;
+	}
+
+	.admin-list-id,
+	.admin-list-name,
+	.admin-list-type,
+	.admin-delete-btn {
+		width: 100%;
+		padding: 5px 0;
+		text-align: left;
+	}
+
+	.admin-delete-btn {
+		text-align: right;
+	}
+}
+
+@media (max-width: 480px) {
+
+	.admin-list-id,
+	.admin-list-name,
+	.admin-list-type {
+		font-size: 14px;
+	}
+
+	.admin-delete-btn {
+		font-size: 18px;
+	}
+}
+
+
+.admin-profile-card {
+	display: flex;
+	/* Use flexbox for vertical centering */
+	flex-direction: column;
+	/* Stack children vertically */
+	align-items: center;
+	/* Center children horizontally */
+	width: 220px;
+	/* Fixed width */
+	height: 250px;
+	/* Fixed height */
+	padding: 20px;
+	/* Padding inside the card */
+	background-color: white;
+	/* Card background */
+	border-radius: 20px;
+	/* Rounded corners */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	/* Soft shadow */
+	text-align: center;
+	/* Center text */
+	transition: all 0.3s ease;
+	/* Smooth transition */
+}
+
+.admin-profile-image {
+	width: 100%;
+	/* Image takes full width of card */
+	height: auto;
+	/* Maintain aspect ratio */
+	border-radius: 15px;
+	/* Rounded corners for the image */
+}
+
+.admin-profile-info {
+	margin-top: 10px;
+	/* Space above the info section */
+}
+
+.admin-profile-name {
+	font-size: 18px;
+	/* Name font size */
+	font-weight: bold;
+	/* Bold font weight */
+	margin: 0;
+	/* Remove default margin */
+}
+
+.admin-profile-role {
+	font-size: 14px;
+	/* Role font size */
+	color: #777;
+	/* Light gray text */
+	margin: 5px 0 0;
+	/* Margin for spacing */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+	.admin-profile-card {
+		width: 180px;
+		/* Adjust card width for tablets */
+		height: auto;
+		/* Allow height to adjust */
+		padding: 15px;
+		/* Adjust padding for smaller screens */
+	}
+
+	.admin-profile-name {
+		font-size: 16px;
+		/* Adjust font size */
+	}
+
+	.admin-profile-role {
+		font-size: 13px;
+		/* Adjust font size */
+	}
+}
+
+@media (max-width: 480px) {
+	.admin-profile-card {
+		width: 150px;
+		/* Further adjust card width for mobiles */
+		height: auto;
+		/* Allow height to adjust */
+		padding: 10px;
+		/* Further adjust padding */
+	}
+
+	.admin-profile-name {
+		font-size: 14px;
+		/* Adjust font size */
+	}
+
+	.admin-profile-role {
+		font-size: 12px;
+		/* Adjust font size */
+	}
+}
+
+.admin-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	column-gap: 20px;
+	grid-row-gap: 20px;
+	font-family: "Jost", sans-serif;
+}
+
+.admin-card {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.admin-card img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+
+.admin-card h3 {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.admin-card p {
+	font-size: 12px;
+	color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.admin-grid {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	}
+}
+
+@media (max-width: 480px) {
+	.admin-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.admin-card h3 {
+		font-size: 14px;
+	}
+
+	.admin-card p {
+		font-size: 12px;
+	}
+}
+
+/* General styling */
+.cat-image-gallery {
+	margin-top: 2rem;
+	margin: 40px;
+	text-align: center;
+}
+
+.cat-image-gallery > div {
+	columns: 3;
+	column-gap: 1.25rem;
+	padding-top: 1.25rem;
+}
+
+.cat-image-wrapper {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	/* Add rounded corners to the image container */
+	margin-bottom: 1.25rem;
+}
+
+/* Styling the images */
+.cat-image-wrapper img {
+	display: block;
+	width: 100%;
+	transition: all 0.3s ease-in-out;
+	/* Smooth transition for hover effect */
+}
+
+/* Darken effect on hover */
+.cat-image-wrapper:hover img {
+	filter: brightness(50%);
+	/* Darken the image when hovered */
+}
+
+/* Overlay text */
+.cat-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* Center the text */
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	pointer-events: none;
+	/* Prevent interference with mouse events */
+	z-index: 1;
+	width: 100%;
+	/* Ensure overlay text fits the container */
+	padding: 0.5rem;
+	color: white;
+}
+
+/* Show the text on hover */
+.cat-image-wrapper:hover .cat-overlay {
+	opacity: 1;
+}
+
+/* Title (larger, bold font) */
+.cat-title {
+	font-size: 30px;
+	margin-bottom: 40px;
+	/* Adds gap below the title */
+	font-family: "Jost", sans-serif;
+	font-weight: 700;
+	/* Bold font */
+}
+
+/* Text (smaller, regular font) */
+.cat-text {
+	font-size: 20px;
+	font-weight: 300;
+	font-family: "Jost", sans-serif;
+	/* Normal font weight */
+	margin: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 48rem) {
+	.cat-image-gallery > div {
+		columns: 2;
+	}
+}
+
+@media (max-width: 32rem) {
+	.cat-image-gallery > div {
+		columns: 1;
+	}
+}
+
+.catpage-carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.catpage-carousel-slides {
+    display: flex;
+    animation: catpage-scroll 12s infinite; /* Auto scroll duration */
+}
+
+.catpage-carousel-slide {
+    min-width: 100%; /* Full-width slide */
+}
+
+.catpage-carousel-slide img {
+    width: 100%;
+    height: auto;
+}
+
+input[type="radio"] {
+    display: none; /* Hide radio buttons */
+}
+
+
+/* Hide the checkbox */
+.adminprofile-popup-toggle {
+    display: none;
+}
+
+/* Popup styles */
+.adminprofile-popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+/* Popup content */
+.adminprofile-popup-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+	height: 80%;
+	overflow-wrap:break-word;
+}
+
+/* Show the popup when the checkbox is checked */
+.adminprofile-popup-toggle:checked + .adminprofile-popup {
+    display: block;
+}
+
+/* Close button */
+.adminprofile-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.adminprofile-close:hover {
+    color: black;
+}
+
+.catslide-slider {
+    width: 100%;
+    max-width: 1920px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.catslide-slides {
+    width: 400%;
+    height: 500px;
+    display: flex;
+}
+
+.catslide-slides input {
+    display: none;
+}
+
+.catslide-slide {
+    width: 25%;
+    transition: 1.5s;
+}
+
+.catslide-slide img {
+    width: 100%;
+    height: 500px;
+}
+
+.catslide-navigation-manual {
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.catslide-manual-btn {
+    border: 2px solid #ECEBE6;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.catslide-manual-btn:not(:last-child) {
+    margin-right: 80px;
+}
+
+.catslide-manual-btn:hover {
+    background: #ECEBE6;
+}
+
+#radio1:checked ~ .catslide-first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .catslide-first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .catslide-first {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .catslide-first {
+    margin-left: -75%;
+}
+
+.catslide-navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    bottom: 40px;
+}
+
+.catslide-navigation-auto div {
+    border: 2px solid #ECEBE6;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.catslide-navigation-auto div:not(:last-child) {
+    margin-right: 80px;
+}
+
+#radio1:checked ~ .catslide-navigation-auto .catslide-auto-btn1,
+#radio2:checked ~ .catslide-navigation-auto .catslide-auto-btn2,
+#radio3:checked ~ .catslide-navigation-auto .catslide-auto-btn3,
+#radio4:checked ~ .catslide-navigation-auto .catslide-auto-btn4 {
+    background: #ECEBE6;
+}
+
+
+.catpage-filter-margin {
+	margin: 40px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+
+.admin-profile-icon {
+	font-size: 150px;
+}
