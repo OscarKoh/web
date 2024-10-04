@@ -1,39 +1,3 @@
-<?php
-$message = "";
-
-session_start();
-
-/*if(!isset($user)) {
-    header("Location: login.php");
-}*/
-$user = 1;
-//$user = $_SESSION["userid"];
-
-
-//1)Make connection to the database
-include_once "common/connection.php";
-    
-// 1)Get user ID from url bar
-//$user_id = $_GET['user_id'];
-
-//2)Prepare SQL statement to user select records user record based on user id from URL file
-$select_user = $connection->prepare("SELECT account.*, user_profile.* FROM account INNER JOIN user_profile ON account.account_id = user_profile.account_id INNER JOIN portfolio ON account.account_id = portfolio.account_id WHERE account.account_id = ?");
-
-//3)Execute the SQL statement
-$select_user->execute([$user]);
-
-//4)Fetch the data selected from the SQL statement
-$result = $select_user->fetch();
-
-if($result){
-    $user_name = $result["account_name"];
-    $user_img = $result["user_picture"];
-    $user_desc = $result["user_desc"];
-    $portfolio_img = $result["users_image_location"]
-    
-}
-?>
-
 <!DOCTYPE html>
 <html>
 
