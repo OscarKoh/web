@@ -68,6 +68,7 @@ $conn->close();
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/mystyle.css" rel="stylesheet">
     <link href="css/all.css" rel="stylesheet">
+    <link href="css/tricia.css.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,7 +78,6 @@ $conn->close();
 
 <body>
     <!-- Section for Content starts here -->
-    <div class="container-fluid">
         <header class="row pb-4 bg-main" style="padding: 20px">
             <div class="col-md-6 col-lg-6 d-flex align-items-center">
                 <a href="home.html">
@@ -106,7 +106,6 @@ $conn->close();
                 </div>
             </nav>
         </header>
-    </div>
 
     <div class="row">
         <div class="col text-center pt-5">
@@ -156,7 +155,6 @@ $conn->close();
             </div>
         </form>
     </div>
-</body>
 
 
 <footer class="row pb-4 bg-main" style="padding: 20px">
@@ -236,5 +234,6 @@ $conn->close();
         </h8>
     </div>
 </footer>
+</body>
 
 </html>
