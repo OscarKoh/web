@@ -98,8 +98,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CONTACT US</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/mystyle.css" rel="stylesheet">
+	<link href="css/shape_style.css" rel="stylesheet">
 	<link href="css/all.css" rel="stylesheet">
+	<link href="css/tricia.css.css" rel="stylesheet">
 	<script src="js/bootstrap.bundle.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -109,7 +110,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 	<!-- Section for Content starts here -->
-	<div class="container-fluid">
 		<header class="row pb-4 bg-main" style="padding: 20px">
 			<div class="col-md-6 col-lg-6 d-flex align-items-center">
 				<a href="home.html">
@@ -138,7 +138,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				</div>
 			</nav>
 		</header>
-	</div>
 
         <div class="row">
             <div class="col text-center pt-5">
@@ -172,8 +171,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             Register
     </button>
     <br>
-    </body>
-</html>
 
 
 
@@ -258,3 +255,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			</h8>
 		</div>
 	</footer>
+
+	</body>
+
+	
+	</html>
