@@ -1,3 +1,66 @@
+<?php
+// Database connection information
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "gradgala";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$message = "";
+
+// Check if the form was submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['account_email'];
+    $username = $_POST['account_name'];
+    $password = $_POST['account_password'];
+    
+    // Simple password validation
+    if (strlen($password) < 8) {
+        $message = "Password must be at least 8 characters long";
+    } else {
+        // Hash the password
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        // Prepare SQL statement
+        $sql = "INSERT INTO account (account_name, account_email, account_password) VALUES (?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sss", $username, $email, $hashed_password);
+
+        // Execute the statement
+        if ($stmt->execute()) {
+            $message = "Registration successful!";
+            // You can add redirection to login page here
+            // header("Location: login.php");
+            // exit();
+        } else {
+            $message = "Registration failed: " . $conn->error;
+        }
+
+        // Close statement and connection
+        $stmt->close();
+    }
+    $conn->close();
+} else {
+    $message = "Please fill out the form below to register.";
+}
+?>
+
+
+
+
+
+
+
+
+<!--PHP END HERE-->
+
 <!DOCTYPE html>
 <html>
 
@@ -6,10 +69,10 @@
     <meta name="description" content="hehe">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRADGALA</title>
+    <title>GRADGALA - Sign Up</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/tricia.css.css" rel="stylesheet">
-    <link href="css/login.css" rel="stylesheet">
+    <link href="css/signup.css" rel="stylesheet">
     <link href="css/all.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +82,7 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/20b1307a62.js" crossorigin="anonymous"></script>
     <link href="css/all.css" rel="stylesheet">
-    <link href="css/signup.css" rel="stylesheet">
+    <link href="css/signUp.css" rel="stylesheet">
     <style>
         .password-container {
             position: relative;
@@ -91,122 +154,38 @@
             </nav>
         </header>
     </div>
-    <div class="signUp-fluid d-flex align-items-center justify-content-center"
-        style="min-height: 70vh; background-size: cover; background-color: rgba(0, 0, 0, 1.0); z-index: 1;">
-        <form id="signup-form" action="#">
-            <h2>Sign Up As Admin</h2>
+<!-- ... 前面的HTML代码保持不变 ... -->
+
+  <!-- Registration form -->
+    <div class="signUp-fluid d-flex align-items-center justify-content-center" style="min-height: 70vh; background-size: cover; background-color: rgba(0, 0, 0, 1.0); z-index: 1;">
+        <?php if($message): ?>
+            <div class="alert <?php echo strpos($message, 'successful') !== false ? 'alert-success' : 'alert-danger'; ?>">
+                <?php echo $message; ?>
+            </div>
+        <?php endif; ?>
+        <form id="signup-form" action="signUp.php" method="POST">
+            <h2>Register Admin</h2>
             <div class="input-field">
-                <input type="text" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.com$
-            " title="Please enter a valid email address">
-                <label>Enter your email</label>
+                <input type="email" id="account_email" name="account_email" required>
+                <label>Email</label>
             </div>
             <div class="input-field">
-                <input type="text" required>
-                <label>Enter your username</label>
+                <input type="text" id="account_name" name="account_name" required>
+                <label>Username</label>
             </div>
             <div class="input-field">
                 <div class="password-container">
-                    <input type="password" id="password" required oninput="toggleFilled(this)">
-                    <label>Enter your password</label>
-                    <span class="toggle-password" onclick="togglePasswordVisibility()">
-                        <i class="fas fa-eye"></i>
-                    </span>
+                    <input type="password" id="account_password" name="account_password" required>
+                    <label>Password</label>
                 </div>
             </div>
-
-            <div class="requirements">
-                Password must contain:
-                <div id="length" class="requirement"><i class="fas fa-times"></i>At least 8 characters</div>
-                <div id="uppercase" class="requirement"><i class="fas fa-times"></i>At least one uppercase letter</div>
-                <div id="lowercase" class="requirement"><i class="fas fa-times"></i>At least one lowercase letter</div>
-                <div id="number" class="requirement"><i class="fas fa-times"></i>At least one number</div>
-                <div id="special" class="requirement"><i class="fas fa-times"></i>At least one special character</div>
-            </div>
-
-            <p>Already have an account? <a href="#">Login now</a></p>
-            <button type="submit" class="signup-btn">Sign Up</button>
+            <p>Already have an account? <a href="#">Login Now</a></p>
+            <button type="submit">Register</button>
         </form>
     </div>
 
-    <script>
-        //JS for psw validation
-        const form = document.getElementById('signup-form');
-        const passwordInput = document.getElementById('password');
-        const submitButton = document.getElementById('submit-btn');
 
-        function checkPasswordStrength(password) {
-            const requirements = {
-                length: password.length >= 8,
-                uppercase: /[A-Z]/.test(password),
-                lowercase: /[a-z]/.test(password),
-                number: /[0-9]/.test(password),
-                special: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)
-            };
-
-            let metCount = 0;
-
-            for (const [key, met] of Object.entries(requirements)) {
-                const element = document.getElementById(key);
-                element.classList.toggle('met', met);
-                element.querySelector('i').className = met ? 'fas fa-check' : 'fas fa-times';
-                if (met) metCount++;
-            }
-
-            submitButton.disabled = metCount !== 5;
-        }
-
-        passwordInput.addEventListener('input', function() {
-            checkPasswordStrength(this.value);
-        });
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const email = document.getElementById('email').value;
-            const username = document.getElementById('username').value;
-            const password = passwordInput.value;
-
-            // If validation passes, you would typically send this data to your server
-            console.log('Sign up data:', { email, username, password });
-            alert('Sign up successful!'); // Replace this with your actual sign up logic
-        });
-
-        function togglePasswordVisibility() {
-            const passwordInput = document.getElementById("password");
-            const toggleIcon = document.querySelector(".toggle-password i");
-
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                toggleIcon.classList.remove("fa-eye");
-                toggleIcon.classList.add("fa-eye-slash");
-            } else {
-                passwordInput.type = "password";
-                toggleIcon.classList.remove("fa-eye-slash");
-                toggleIcon.classList.add("fa-eye");
-            }
-        }
-
-        function validateEmail() {
-            const emailInput = document.getElementById("email").value;
-            const regex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.com$/;
-
-            if (!regex.test(emailInput)) {
-                alert("The email you entered is invalid. Please enter an email that ends with .com.");
-                return false;
-            }
-
-            return true;
-        }
-
-        function toggleFilled(input) {
-            const label = input.nextElementSibling;
-            if (input.value) {
-                label.classList.add('filled');
-            } else {
-                label.classList.remove('filled');
-            }
-        }
-    </script>
+<!-- ... 后面的HTML代码保持不变 ... -->
 
 
 
