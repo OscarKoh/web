@@ -29,8 +29,7 @@ if($result){
     $user_name = $result["account_name"];
     $user_img = $result["user_picture"];
     $user_desc = $result["user_desc"];
-    $portfolio_img = $result["users_image_location"]
-    
+    $portfolio_img = $result["users_image_location"];
 }
 ?>
 <!DOCTYPE html>
@@ -44,7 +43,6 @@ if($result){
     <title>GRADGALA</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/mystyle.css" rel="stylesheet">
-    <link href="css/jingxuan.css" rel="stylesheet">
     <link href="css/all.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,25 +90,12 @@ if($result){
                 <h2>Artist</h2>
                 <img src="image/profile/1..png" class="w-60">
                 <h6><?php echo $user_name; ?></h6>
-                <?php echo $user; ?>
             </div>
 
             <div class="col-md-8 bg-white">
                 
                 <h5>Description:</h5>
                 <p><?php echo $user_desc; ?></p>
-                <!--<form action="" method="post" enctype="multipart/form-data">
-                    <br>
-                    <div class="form-group">
-                        <label for="desc">Description:</label>
-                        <textarea class="form-control" rows="5" id="desc" name="desc" placeholder="Fill in your personal description here"></textarea>
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="desc">Specialize in which area?:</label>
-                        <textarea class="form-control" rows="1" id="desc" name="desc" placeholder="3D or 2D..."></textarea>
-                    </div>
-                </form>-->
                 <br>
                 <br>
              </div>
