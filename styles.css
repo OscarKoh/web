@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: rgba(233, 233, 233, 0.8);
+}
+
+.feature {
+    text-align: center;
+    flex: 1;
+}
+
+.feature h2 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.feature p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Explore Section */
+.explore {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.explore h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.explore-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.explore-item {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: rgba(244, 244, 244, 0.8);
+    border-radius: 10px;
+}
+
+.explore-item h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Coming Soon Section */
+.coming-soon {
+    text-align: center;
+    padding: 60px;
+    background-color: rgba(34, 34, 34, 0.8);
+    color: #fff;
+}
+
+.coming-soon h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.coming-soon p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.visit-us {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: rgba(244, 244, 244, 0.8);
+    padding: 40px;
+    text-align: center;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.testimonials cite {
+    font-size: 1rem;
+    color: #888;
+}
