@@ -1,0 +1,118 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 80% max-width:600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border-style: solid;
+    box-shadow: 10px, 10px rgba(1, 1, 1, 1);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    box-shadow: 0, 0, 5px #333;
+}
+
+form button: hover {
+    background-color: #555;
+}
+
+.register-button {
+    display: block;
+    margin: auto;
+    background-color: azure;
+    border-radius: 80px;
+    border-style: groove;
+    padding: 10px 30px;
+}
+
+.placeholder {
+    background-color: #EEDAD1;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+label {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.input {
+    border-radius: 30px;
+    border-style: groove;
+    background-color: whitesmoke;
+    padding: 2px;
+    width: 300px;
+}
+
+.message {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.submit-button {
+    display: block;
+    margin: auto;
+    background-color: whitesmoke;
+    border-radius: 80px;
+    border-style: solid;
+    border-color: darkgray;
+    padding: 5px 30px;
+}
+
+.bg-feedback-dark-blue {
+    background-color: #1a2942;
+    color: white;
+    width: 50% max-width: 100px;
+    margin: 50px auto;
+    padding: 20px;
+}
