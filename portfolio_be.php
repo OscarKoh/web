@@ -92,6 +92,7 @@ if(isset($_POST["submit"])){
     <title>GRADGALA</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/mystyle.css" rel="stylesheet">
+    <link href="css/jingxuan.css" rel="stylesheet">
     <link href="css/all.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
