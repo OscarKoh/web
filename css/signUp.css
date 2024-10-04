@@ -87,7 +87,7 @@ a:hover{
 }
 
 .signUp-fluid {
-    background-image: url(../image/signUpImage/signUp.png);
+    background-image: url(../image/signUpImage/signUp.jpg);
     background-color: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
 }
 
@@ -105,6 +105,27 @@ input[type="password"] {
     padding: 10px;
     border-radius: 4px;
 }
+
+.requirement {
+    color: white; /* Default color: white */
+}
+
+.requirement.met {
+    color: black; /* Change the color to black when the requirement is met */
+}
+
+p {
+    color: white; /* Change paragraph text to white */
+}
+
+p a {
+    color: white; /* Change link text to white */
+}
+
+p a:hover {
+    color: orange; /* Optional: Change link color on hover */
+}
+
 
 label {
     position: absolute;
@@ -136,4 +157,3 @@ input[type="email"]:focus + label {
     top: 10px; /* Adjusts the top position when filled */
     transform: translateY(-120%);
     color: #fff; /* Change color when filled */
-}

@@ -88,7 +88,7 @@ a:hover{
 }
 
 .signUp-fluid {
-    background-image: url(../image/loginImage/login\ img.jpg);
+    background-image: url(../image/loginImage/login%20img.jpg);
     background-color: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
 }
 
@@ -154,6 +154,26 @@ input[type="email"]:focus + label {
 .forget label {
   display: flex;
   align-items: center;
+}
+
+/* Forgot password link */
+.forget a {
+    color: white;
+    text-decoration: none;
+}
+
+.forget a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+/* Toggle password visibility icon */
+.toggle-password i {
+    color: white;
+}
+
+.toggle-password:hover i {
+    color: orange;
 }
 
 #role{
