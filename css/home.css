@@ -1,0 +1,238 @@
+.homebanner {
+    background-image: url('../image/homeimage/homebanner.png'); /* Replace with the actual path of your image */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ECEBE6;
+}
+
+.category-container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    background-color: #ECEBE6;
+}
+
+.category-card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.category-card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 320px;
+}
+
+.category-card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.category-card > .row > .description {
+    display: flex;  
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #b0b 0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.category-card[for="c1"] {
+    background-image: url('../image/homeimage/test1.jpg');
+}
+.category-card[for="c2"] {
+    background-image: url('../image/homeimage/test2.jpg');
+}
+.category-card[for="c3"] {
+    background-image: url('../image/homeimage/test3.jpg');
+}
+.category-card[for="c4"] {
+    background-image: url('../image/homeimage/test4.jpg');
+}
+
+
+/* Row 1: Header Section */
+.grad-header {
+    background-color: #ECEBE6;
+    padding: 20px;
+    text-align: center;
+}
+
+.grad-header-title {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.grad-header-desc {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    text-align: right;
+    margin-left: auto;
+    font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.grad-about-link {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 1350px;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Row 2: Features Section */
+.grad-features {
+    display: flex;
+    justify-content: space-around;
+    padding: 190px;
+    background-color: #e9e9e9;
+    background-image: url('../image/homeimage/whoareweimg.png'); /* Replace with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    color: white; /* Change text color if the background image is dark */
+}
+
+.grad-feature {
+    text-align: center;
+    flex: 1;
+}
+
+.grad-feature-number {
+    font-size: 3rem;
+    color: wh;
+}
+
+.grad-feature-text {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Row 3: Coming Soon Section */
+.grad-coming-soon {
+    text-align: center;
+    padding: 200px;
+    color: #fff;
+    background-color: #e9e9e9;
+    background-image: url('../image/homeimage/comingimg.png'); /* Replace with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; 
+}
+
+.grad-coming-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.grad-coming-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.grad-coming-date {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.grad-visit-us-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Row 4: Help Us Improve Section */
+.grad-improve {
+    text-align: center;
+    padding: 200px;
+    background-color: #e9e9e9;
+    background-image: url('../image/homeimage/improve.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; 
+    color: #fff;
+}
+
+.grad-improve-title {
+    font-size: 5rem;
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-style: normal;
+}
+
+.grad-improve-subtitle {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.grad-contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
